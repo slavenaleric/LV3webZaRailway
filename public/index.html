@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Vremenski podaci i statistika za različite lokacije.">
+    <link rel="stylesheet" href="style.css">
+    <title>Vremenski Podaci</title>
+</head>
+<header>
+    <h1>Dobrodošli na moju web stranicu!</h1>
+</header>
+
+<nav aria-labelledby="primarna-navigacija">
+    <h2 id="primarna-navigacija"></h2>
+    <ul>
+        <li><a href="slike.html">Galerija</a></li>
+        <li><a href="grafikon.html">Grafikon</a></li>
+        
+    </ul>
+	<div class="cart-container">
+  	<button id="cart-icon">🛒</button>
+ 	 <div id="dropdown-kosarica" class="dropdown-content">
+    	<ul id="dropdown-lista"></ul>
+    	<button id="potvrdi-kosaricu">Potvrdi plan</button>
+  	</div>
+</div>
+</nav>
+<main>
+    <section>
+
+        <h2>Vremenski Podaci</h2>
+        <table id="vrijeme-tablica">
+            <thead>
+              <tr>
+                <th>ID</th>
+                <th>Temperatura (°C)</th>
+                <th>Vlaga (%)</th>
+                <th>Vjetar (km/h)</th>
+                <th>Oborine (%)</th>
+                <th>Oblačnost</th>
+                <th>Tlak (hPa)</th>
+                <th>UV Indeks</th>
+                <th>Sezona</th>
+                <th>Akcija</th>
+              </tr>
+            </thead>
+            <tbody></tbody>
+          </table>
+          <div id = "filteri">
+            <select id="filter-season">
+                <option value="">-- Odaberi sezonu --</option>
+                <option value="Summer">Summer</option>
+                <option value="Winter">Winter</option>
+                <option value="Autumn">Autumn</option>
+                <option value="Spring">Spring</option>
+            </select>
+            
+            <select id="filter-weather">
+                <option value="">-- Odaberi oblačnost --</option>
+                <option value="clear">Clear</option>
+                <option value="partly cloudy">Partly Cloudy</option>
+                <option value="overcast">Overcast</option>
+            </select>
+        
+        </div>
+          <input type="range" id="filter-temp" min="-30" max="50" value="15">
+          <span id="temp-value">15°C</span>
+          <button id="primijeni-filtere">Filtriraj</button>
+    </section>
+
+    <aside>
+        <picture>
+            <!-- Slika za veće ekrane (desktop) -->
+            <source media="(min-width: 768px)" srcset="https://media.istockphoto.com/id/1257951336/photo/transparent-umbrella-under-rain-against-water-drops-splash-background-rainy-weather-concept.jpg?s=612x612&w=0&k=20&c=lNvbIw1wReb-owe7_rMgW8lZz1zElqs5BOY1AZhyRXs=">
+            <!-- Slika za manje ekrane (mobile) -->
+            <img src="https://play-lh.googleusercontent.com/EKqL51kqaqzSLOW7UBthAtK3C1FLk76wzNVN_6dMidtUbKBHtw3CT3zSVvvXWt87jTBa=s256-rw" alt="Tema slike">
+        </picture>
+
+    </aside>
+    <script src="papaparse.min.js"></script>
+    <script src="script.js"></script>
+</main>
+    <footer>
+        <p>&copy; Slaven Alerić</p>
+    </footer>

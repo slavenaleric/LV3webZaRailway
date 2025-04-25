@@ -1,0 +1,154 @@
+@import url('https://fonts.googleapis.com/css?family=Abel');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Abel', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+/* Header */
+header {
+  background-color: #19005f;
+  color: white;
+  text-align: center;
+  padding: 20px;
+}
+
+header h1 {
+  font-size: 2.5rem;
+  letter-spacing: 2px;
+}
+
+/* Navigation */
+nav {
+  background-color: #230181;
+  padding: 15px;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+}
+
+nav ul li {
+  margin: 0 20px;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: white;
+  font-size: 1.2rem;
+  transition: color 0.3s;
+}
+
+nav ul li a:hover {
+  color: #ff6347; /* Tomato color */
+}
+
+
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+a.image-popup-vertical-fit {
+  cursor: -webkit-zoom-in;
+}
+
+.galerija {
+  display: flex;
+  flex-wrap: wrap; /* omogućava prelazak na novi red kada ne stane u trenutni */
+  gap: 10px;
+  justify-content: center;
+}
+
+.galerija_slika {
+  width: 30%; /* Širina svake slike */
+  min-width: 250px; /* Minimalna širina slike, možeš prilagoditi prema potrebi */
+  margin-bottom: 10px;
+}
+
+.galerija_slika img {
+  width: 100%; /* Slike će zauzeti cijeli prostor unutar svojih kutija */
+  height: auto;
+  border-radius: 10px;
+  transition: transform 0.3s ease;
+}
+
+.galerija_slika img:hover {
+  transform: scale(1.03);
+}
+
+.galerija_slika {
+  position: relative;
+  overflow: hidden;
+}
+
+/* Osnovna postavka za slike */
+.galerija_slika img {
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+    transition: transform 0.3s ease-in-out;
+}
+
+.galerija_slika img:hover {
+    transform: scale(1.1);  /* Efekt uvećanja pri hoveru */
+}
+
+/* Skriva veće slike po defaultu */
+.zoomed {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.7);
+    justify-content: center;
+    align-items: center;
+    z-index: 999;
+}
+
+.zoomed img {
+    max-width: 90%;
+    max-height: 90%;
+    border-radius: 10px;
+}
+
+.zoomed:target {
+    display: flex;
+}
+
+.close {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    color: white;
+    font-size: 30px;
+    text-decoration: none;
+}
+
+.galerija h1 {
+  color: darkblue;
+  font-size: 2rem;
+  text-align: center;
+}
+
+footer {
+  text-align: center;
+  background-color: #19005f;
+  color: white;
+  padding: 15px;
+  position: relative;
+  bottom: 0;
+  width: 100%;
+}

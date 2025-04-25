@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+  <meta charset="UTF-8">
+  <title>Planiranje aktivnosti prema vremenu</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>Vrijeme</h1>
+<div id = "filteri">
+    <select id = "filter-weather">
+        <option value="">-- Odaberi sezonu</option>
+        <option value="Summer">Summer</option>
+        <option value="Winter">Winter</option>
+        <option value="Autumn">Autumn</option>
+        <option value="Spring">Spring</option>
+    </select>
+</div>
+
+  <table id="vrijeme-tablica">
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Temperatura (°C)</th>
+        <th>Vlaga (%)</th>
+        <th>Vjetar (km/h)</th>
+        <th>Oborine (%)</th>
+        <th>Oblačnost</th>
+        <th>Tlak (hPa)</th>
+        <th>UV Indeks</th>
+        <th>Sezona</th>
+        <th>Akcija</th>
+      </tr>
+    </thead>
+    <tbody></tbody>
+  </table>
+  <input type="range" id="filter-temp" min="-30" max="50" value="15">
+  <span id="temp-value">15°C</span>
+
+  <select id="filter-weather">
+    <option value="">-- Vrijeme --</option>
+    <option value="clear">Clear</option>
+    <option value="partly cloudy">Partly Cloudy</option>
+    <option value="overcast">Overcast</option>
+  </select>
+
+  <button id="primijeni-filtere">Filtriraj</button>
+
+
+  <script src="script.js"></script>
+</body>
+</html>

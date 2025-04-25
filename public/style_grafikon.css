@@ -1,0 +1,161 @@
+@import url('https://fonts.googleapis.com/css?family=Abel');
+@import "compass/css3";
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Abel', sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+
+/* Header */
+header {
+    background-color: #19005f;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+header h1 {
+    font-size: 2.5rem;
+    letter-spacing: 2px;
+}
+
+/* Navigation */
+nav {
+    background-color: #230181;
+    padding: 15px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li {
+    margin: 0 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 1.2rem;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: #ff6347; /* Tomato color */
+}
+
+
+.chart-section {
+    text-align: center;
+}
+
+
+.bar-chart-container {
+    max-width: 600px;
+    margin: 0 auto;
+  }
+  
+  .bar-chart {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-around;
+    height: 200px;
+    background: #fff;
+    padding: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 12px;
+    overflow: hidden;
+  }
+  
+  .bar {
+    width: 40px;
+    background: #4a90e2;
+    height: 0;
+    border-radius: 5px 5px 0 0;
+    animation: growBar 1s ease-out forwards;
+  }
+  
+  @keyframes growBar {
+    to {
+      height: var(--value);
+    }
+  }
+  
+  .bar-legend ul {
+    list-style: none;
+    padding: 0;
+    margin: 1rem 0;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+  
+  .color-box {
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    margin-right: 5px;
+    vertical-align: middle;
+    border: 1px solid #333;
+  }
+  
+
+  
+  .pie-chart-container {
+    text-align: center;
+    margin-top: 2rem;
+  }
+  
+  .pie-chart {
+    position: relative;
+    width: 200px;
+    height: 200px;
+    margin: 1rem auto;
+    border-radius: 50%;
+    background: conic-gradient(
+      #f44336 0% 40%,
+      #2196f3 40% 70%,
+      #ffeb3b 70% 100%
+    );
+  }
+  
+  .center-circle {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 80px;
+    height: 80px;
+    background: #f0f0f0;
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+  }
+  
+  .pie-legend ul {
+    list-style: none;
+    padding: 0;
+    margin-top: 1rem;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+  }
+
+  footer {
+    text-align: center;
+    background-color: #19005f;
+    color: white;
+    padding: 15px;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
